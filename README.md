@@ -12,15 +12,16 @@ Vamos fazer o CRUD obsevando as demandas de negócio :point_down:
 - ver viagens com número de passageiros<br />
 - ordenar viagens com número de paradas<br />
 
-- cadastrar novo passageiro<br />
-- cadastrar motorista<br />
+- cadastrar novo passageiro em uma viagem enviando apenas nome, email e id da viagem<br />
+- cadastrar todas as informações de um novo motorista em uma viagem<br />
 
 - deletar uma viagem<br />
-- deletar um passageiro<br />
+- deletar um passageiro no sistema<br />
 
 - editar qualquer dado do motorista<br />
 - substituir motorista<br />
-- editar nome passageiro
+- editar nome do passageiro no sistema<br />
+- atualizar um passageiro no sistema<br />
 
 # Orientações para requests (Contrato API)
 Use o espaço abaixo para organizar as urls e respectivas ações do CRUD, relacionando com as demandas de negócio.<br />
@@ -28,22 +29,20 @@ Use o espaço abaixo para organizar as urls e respectivas ações do CRUD, relac
 ## Em aula
 - ver todas as viagens disponíveis<br />
 
-- ver viagens por id<br />
+- pesquisar uma viagem por id<br />
 
-- ver todas as viagens disponíveis<br />
-
-- cadastrar novo passageiro em uma viagem<br />
+- cadastrar novo passageiro em uma viagem enviando apenas nome, email e id da viagem<br />
 
 - deletar um passageiro do sistema<br />
 
 - atualizar um passageiro no sistema<br />
 
-- editar nome passageiro no sistema<br />
+- editar nome do passageiro no sistema<br />
  
 
 ### Para Casa
 - ordenar viagens com número de passageiros<br />
-- cadastrar um novo motorista em uma viagem<br />
+- cadastrar todas as informações de um novo motorista em uma viagem<br />
 
 - editar qualquer dado do motorista<br />
 - substituir motorista<br />
