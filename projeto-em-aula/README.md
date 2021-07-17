@@ -27,19 +27,60 @@ Vamos fazer o CRUD obsevando as demandas de negócio :point_down:
 Use o espaço abaixo para organizar as urls e respectivas ações do CRUD, relacionando com as demandas de negócio.<br />
 
 ## Em aula
+REFERENTE À VIAGENS
 - ver todas as viagens disponíveis<br />
+{GET}/travels
+const getAllTravels
 
 - pesquisar uma viagem por id<br />
+{GET}/travels/:id
+const getTravelById
 
-- cadastrar novo passageiro em uma viagem enviando apenas nome, 
+
+REFERENTE À PASSAGEIRO
+- cadastrar novo passageiro em uma viagem enviando apenas nome, email e id da viagem<br />
+{POST}/travels/:id/passenger/create
+
+    {
+        "id": automático,
+        "name": String,
+        "email": String,
+        "documentNumber": String,
+        "travelId": String
+    }
+
+const createPeople
 
 - deletar um passageiro do sistema<br />
+{DELETE}/passenger/:id/delete
+
+const deletePeople
+
+// apesar do PUT ser usado para substituir
+- atualizar um passageiro no sistema<br />
+{PUT}/passenger/:id/update
+
+const updatePeople
+
+    {
+        "name": String,
+        "email": String,
+        "documentNumber": String,
+        "travelId": String
+    }
+
+- editar o nome do passageiro no sistema<br />
+ {PATCH}/passenger/:id/updateName
+
+    {
+        "name": String
+    }
+
+ const updateName
+
 
 
 ### Para Casa
-- atualizar um passageiro no sistema<br />
-- editar o nome do passageiro no sistema<br />
-
 - ordenar viagens com número de passageiros<br />
 - cadastrar todas as informações de um novo motorista em uma viagem<br />
 
@@ -51,5 +92,4 @@ Use o espaço abaixo para organizar as urls e respectivas ações do CRUD, relac
 DESAFIO \o/<br />
 - ver viagens por tempo de duração<br />
 - ordenar viagens com número de paradas<br />
-- apagar um passegeiro de uma viagem específica
 
