@@ -82,14 +82,25 @@ const updatePeople
 
 ### Para Casa
 - ordenar viagens com número de passageiros<br />
-- cadastrar todas as informações de um novo motorista em uma viagem<br />
-
-- editar qualquer dado do motorista<br />
+- editar número de paradas de uma viagem<br />
 - substituir motorista<br />
-
 - deletar uma viagem<br />
+
+OPCIONAL (ótimo pra lógica <3)
+- editar qualquer dado do motorista<br />
+- cadastrar todas as informações de um novo motorista em uma viagem<br />
 
 DESAFIO \o/<br />
 - ver viagens por tempo de duração<br />
 - ordenar viagens com número de paradas<br />
+
+
+
+// AULA DE REVISÃO //
+
+[] conversar/interpretar sobre demandas
+[x] quando usar app.use
+[] revisar fs
+
+[] postman: quando usar id da viagem ou do passageiro
 
