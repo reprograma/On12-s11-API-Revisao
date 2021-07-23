@@ -96,12 +96,3 @@ DESAFIO \o/<br />
 - ordenar viagens com número de paradas<br />
 
 
-
-// AULA DE REVISÃO //
-
-[] conversar/interpretar sobre demandas
-[x] quando usar app.use
-[] revisar fs
-
-[] postman: quando usar id da viagem ou do passageiro
-
