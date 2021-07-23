@@ -87,11 +87,85 @@ const deletePerson = (req, res) => {
             };
         });
     };
-}
+};
+
+// atualizar um passageiro no sistema
+const updatePerson = (req, res) => {
+    // trazer id do passegeiro
+    const requiredId = req.params.id;
+    // trazer dados da atualização
+    const { name, email, documentNumber } = req.body;
+
+    // filtrar para achar o passageiro
+    let filteredPassenger = utils.findById(passengers, requiredId);
+
+    // console.log(filteredPassenger);
+    // console.log('TRAVEL ID', filteredPassenger.travelId)
+    // criar novo objeto do passageiro
+    const updatedPassenger = {
+        id: filteredPassenger.id,
+        name,
+        email,
+        documentNumber,
+        travelId: filteredPassenger.travelId
+    };
+
+    // achar index do passageiro
+    const index = passengers.indexOf(filteredPassenger)
+
+
+    // verificar se o index existe, se existir, usar método splice para substituição
+    if (index >= 0) {
+        passangers.splice(index, 1, updatedPassenger);
+        // usar método fs e enviar resposta 
+        fs.writeFile("./src/models/passangers.json", JSON.stringify(passengers), "utf8", (err) => {
+            if (err) {
+                res.status(500).send({
+                    "message": err
+                })
+            } else {
+                res.status(200).send({
+                    "message": "Passageiro atualizado com sucesso",
+                    filteredPassenger
+                })
+            }
+        })
+    }
+};
+
+// editar o nome do passageiro no sistema
+const updateName = (req, res) => {
+    const requiredId = req.params.id; // armazenando em uma variável o id do passageiro que chega via path params
+    let newName = req.body.name; // armazenando o nome do passageiro a ser atualizado
+    // console.log(requiredId)
+
+    let filteredPassenger = utils.findById(passengers, requiredId);
+    // console.log('PASSENGER', filteredPassenger);
+
+    if (filteredPassenger) {
+        // console.log(filteredPassenger)
+        filteredPassenger.name = newName; // atribuição de valor
+
+        fs.writeFile("./src/models/passengers.json", JSON.stringify(passengers), 'utf8', (err) => {
+            if (err) {
+                res.status(500).send({ message: err }) // caso de erro retorno status 500
+            } else {
+                res.status(200).json([{
+                    "mensagem": "Nome do passageiro atualizado com sucesso",
+                    filteredPassenger
+                }]);
+            }
+        })
+    } else {
+        res.status(500).send({ "message": "Passageiro não encontrado" })
+    }
+};
 
 module.exports = {
     getAllTravels,
     getTravelById,
     createPerson,
-    deletePerson
+    deletePerson,
+    updatePerson,
+    updateName
 }
