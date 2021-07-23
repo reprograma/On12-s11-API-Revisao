@@ -82,11 +82,12 @@ const updatePeople
 
 ### Para Casa
 - ordenar viagens com número de passageiros<br />
-- editar número de paradas de uma viagem<br />
-- substituir motorista<br />
 - deletar uma viagem<br />
 
-OPCIONAL (ótimo pra lógica <3)
+Escolha entre:
+- editar número de paradas de uma viagem<br />
+- substituir motorista<br />
+<br /> OU <br />
 - editar qualquer dado do motorista<br />
 - cadastrar todas as informações de um novo motorista em uma viagem<br />
 
